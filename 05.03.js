@@ -22,6 +22,8 @@ function get_array(num) {
 console.log(get_array(arrNum1));
 console.log(get_array(arrNum2));
 
+//**********************************************************************************************
+
 let evenLowSum1 = 1;
 const evenHighSum1 = 1000;
 //const expected = 250500
