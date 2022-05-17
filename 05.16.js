@@ -59,3 +59,58 @@ function AllNamesAndIdsSpecificType(pokemon, type) {
 }
 
 // console.log(AllNamesAndIdsSpecificType(pokémon, "poison"));
+//*******************************************************************/
+
+/**
+ * given an array of pokemon objects, return an array with only the names of all
+ * the pokemon that only have 1 type
+ * @param {Array<Objects>} pokemon an array of objects
+ * @returns {Array} an array of all the names of pokemon with only one type
+ */
+function AllPokemonWithOnlyOneType(pokemon) {
+  newArr = [];
+  for (i = 0; i < pokemon.length; i++) {
+    if (pokemon[i].types.length < 2) {
+      newArr.push({ name: pokemon[i].name });
+    }
+    //if(pokemon[i].types.length === 1){
+    //newArr.push({"name": pokemon[i].name});
+    //}
+  }
+  return newArr;
+}
+
+console.log(AllPokemonWithOnlyOneType(pokémon));
+
+/**
+ * given an array of pokemon objects and a string for type, return an array with
+ * only the names, in reverse, of the pokemon with the given type
+ * @param {Array<Objects>} pokemon an array of objects
+ * @param {String} type a string
+ * @returns {Array<Strings>} an array of pokemon names in reverse
+ */
+function AllPokemonNamesReverse(pokemon, type) {
+  newArr = [];
+  for (i = 0; i < pokemon.length; i++) {
+    if (pokemon[i].types.includes(type)) {
+      newStr = "";
+      // this loop goes from front to back
+      for (j = 0; j < pokemon[i]["name"].length; j++) {
+        newStr = pokemon[i]["name"][j] + newStr;
+        console.log(newStr);
+      }
+      // this loop goes from back to front
+      // for(j=pokemon[i]["name"].length - 1; j >= 0 ; j--){
+      //   newStr += pokemon[i]["name"][j];
+      //   console.log(newStr)
+      // }
+
+      // this is using built in methods
+      // newArr.push({"name": pokemon[i].name.split("").reverse().join("")})
+      newArr.push(newStr);
+    }
+  }
+  return newArr;
+}
+
+console.log(AllPokemonNamesReverse(pokémon, "poison"));
