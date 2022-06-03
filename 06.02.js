@@ -25,13 +25,13 @@ const freqArr3 = [];
 function frequencyTableBuilder(arr) {
   expected = {};
   for (i = 0; i < arr.length; i++) {
-    console.log(`i is ${i}, expected[${arr[i]}] is ${expected[arr[i]]}`);
+    //console.log(`i is ${i}, expected[${arr[i]}] is ${expected[arr[i]]}`);
     if (expected[arr[i]]) {
       expected[arr[i]]++;
     } else {
       expected[arr[i]] = 1;
     }
-    console.log(expected);
+    //console.log(expected);
   }
   return expected;
 }
