@@ -23,7 +23,7 @@ function maxMinAvg(arr) {
       maxNum = arr[i];
     }
     if (arr[i] < minNum) {
-      //store max number
+      //store min number
       minNum = arr[i];
     }
     sum = sum + arr[i];
