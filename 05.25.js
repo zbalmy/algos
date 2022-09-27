@@ -1,4 +1,4 @@
-const decodeStr1 = "a3b2c1d3";
+const decodeStr1 = "3ab2c1d3";
 // const expected = "aaabbcddd";
 
 const decodeStr2 = "a3b2c12d10";
